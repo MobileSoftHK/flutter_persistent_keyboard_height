@@ -101,7 +101,7 @@ class _PersistentKeyboardHeightProviderState
   @override
   Widget build(BuildContext context) {
     // https://stackoverflow.com/a/49271649/9714875
-    _bottomOffset = MediaQuery.of(context).viewInsets.bottom;
+    _bottomOffset = MediaQuery.of(context).viewInsets.bottom + MediaQuery.of(context).viewPadding.bottom;
 
     if (_keyboardHeightFromKeyboardUtils != 0 &&
         _bottomOffset != _keyboardHeight) {
